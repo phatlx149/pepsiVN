@@ -1,0 +1,251 @@
+html {
+  font-family: "Lato", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-image: url(../images/bg.png);
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1% 5%;
+}
+.nav .bar {
+  display: none;
+}
+.nav .moblie_Bar {
+  display: none;
+}
+.nav .logo_nav {
+  width: 5%;
+}
+.logo_nav img {
+  width: 100%;
+}
+.nav .menu_nav {
+  width: 55%;
+}
+.menu_nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.menu_nav ul li {
+  list-style: none;
+  margin-right: 30px;
+}
+.menu_nav li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+.nav .more_nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 15%;
+}
+.more_nav button {
+  font-size: 1rem;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  padding: 10px;
+  background: transparent;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.main {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 1% 5%;
+  margin-top: 50px;
+}
+.main .list-items {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.list-items .items {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.items .text-item {
+  width: 40%;
+}
+.text-item h1 {
+  font-size: 5rem;
+  color: #fff;
+  font-weight: 600;
+}
+.items .img-item {
+  width: 55%;
+}
+.img-item img {
+  width: 100%;
+}
+.moblie_bar {
+  display: none;
+}
+.list-items .text-items {
+  width: 50%;
+}
+.text-items p {
+  font-size: 1.1rem;
+  color: #fff;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+.text-items button {
+  padding: 15px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  background: transparent;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+/* CSS hover */
+.menu_nav li a:hover {
+  border-bottom: 2px solid #fff;
+}
+.more_nav button:hover {
+  background: #333;
+}
+.text-items button:hover {
+  color: #0062bd;
+  background: rgb(245, 245, 245);
+}
+.nav .fas {
+  display: none;
+}
+
+/* Moblie  */
+@media only screen and (max-width: 739px) {
+  .nav {
+    width: 100%;
+  }
+  .nav .logo_nav {
+    width: 15%;
+  }
+  .nav .more_nav {
+    display: none;
+  }
+  .nav .menu_nav {
+    display: none;
+  }
+  .nav .bar {
+    display: none;
+    width: 100%;
+    background: #fff;
+    padding: 2%;
+    transform: translateY(-150%);
+  }
+  .nav .bar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu_nav li {
+    padding: 0;
+  }
+  .menu_nav li:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  .menu_nav li a {
+    color: #333;
+    animation: animation 10s infinite;
+  }
+  .nav .fas {
+    display: block;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  .nav input {
+    display: none;
+  }
+  .moblie_Bar:checked ~ .bar {
+    display: block;
+    transform: translateY(0);
+    animation: opa 0.5s linear;
+    transition: 0.5s;
+    margin: 15px 0;
+  }
+  .main {
+    margin: 0;
+  }
+  .list-items .items {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .items .img-item {
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dedede;
+  }
+  .items .text-item {
+    width: 100%;
+  }
+  .text-item h1 {
+    font-size: 3rem;
+  }
+  .list-items .text-items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .text-items button {
+    animation: button 5s linear infinite;
+  }
+}
+@keyframes animation {
+  0% {
+    color: #333;
+  }
+  25% {
+    color: rgb(57, 152, 184);
+  }
+  50% {
+    color: lightslategray;
+  }
+  75% {
+    color: rgb(74, 166, 228);
+  }
+}
+@keyframes button {
+  0% {
+    background: transparent;
+  }
+  25% {
+    background: cornflowerblue;
+  }
+  50% {
+    background: #333;
+  }
+}
+@keyframes opa {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

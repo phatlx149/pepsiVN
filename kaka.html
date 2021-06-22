@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/type.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="img_item">
+        <img id="img-boss" src="./images/pro_basas_A61068_1 (1).jpg" alt="" />
+        <div class="list_img">
+          <img
+            class="product-img"
+            src="/images/pro_basas_A61068_1.jpg"
+            alt=""
+            onclick="changeImg()"
+          />
+          <img
+            class="product-img"
+            src="/images/pro_basas_A61068_2.jpg"
+            alt=""
+            onclick="changeImg()"
+          />
+          <img
+            class="product-img"
+            src="/images/pro_basas_A61068_3.jpg"
+            alt=""
+            onclick="changeImg()"
+          />
+          <img
+            class="product-img"
+            src="/images/pro_basas_A61068_4.jpg"
+            alt=""
+            onclick="changeImg()"
+          />
+        </div>
+      </div>
+    </div>
+    <script>
+      var img_item = document.getElementById("img-boss");
+      var list_img = document.getElementsByClassName("product-img");
+      console.log(list_img);
+
+      function changeImg() {
+        list_img[0] = img_item.src;
+      }
+      console.log(changeImg);
+    </script>
+  </body>
+</html>

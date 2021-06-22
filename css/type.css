@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.container .img_item {
+  width: 30%;
+}
+.img_item img {
+  width: 100%;
+}
+.img_item .list_img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.list_img img {
+  width: 24%;
+  cursor: pointer;
+}
